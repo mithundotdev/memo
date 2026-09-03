@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.fleetworks.memo.core.TagParserTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-09-03T15:40:18" hostname="MITHUN" time="0.031">
+  <properties/>
+  <testcase name="extractsSingleTag" classname="dev.fleetworks.memo.core.TagParserTest" time="0.022"/>
+  <testcase name="extractsMultipleTags" classname="dev.fleetworks.memo.core.TagParserTest" time="0.007"/>
+  <testcase name="dedupesRepeatedTags" classname="dev.fleetworks.memo.core.TagParserTest" time="0.0"/>
+  <testcase name="ignoresHashWithoutName" classname="dev.fleetworks.memo.core.TagParserTest" time="0.0"/>
+  <testcase name="returnsEmptyWhenNoTags" classname="dev.fleetworks.memo.core.TagParserTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

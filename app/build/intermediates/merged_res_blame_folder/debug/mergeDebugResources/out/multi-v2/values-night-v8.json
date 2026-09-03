@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "dev.fleetworks.memo.app-mergeDebugResources-54:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\srisr\\.gradle\\caches\\8.9\\transforms\\c0720e649584b52679cc06b96b99d3c8\\transformed\\core-splashscreen-1.0.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "85",
+                        "endOffsets": "136"
+                    }
+                }
+            ]
+        }
+    ]
+}

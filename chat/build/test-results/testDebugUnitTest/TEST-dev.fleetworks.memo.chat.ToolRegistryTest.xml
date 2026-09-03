@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.fleetworks.memo.chat.ToolRegistryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-09-03T15:39:38" hostname="MITHUN" time="0.239">
+  <properties/>
+  <testcase name="searchCreateGetUpdateDelete" classname="dev.fleetworks.memo.chat.ToolRegistryTest" time="0.237"/>
+  <testcase name="unknownIdReturnsNotFound" classname="dev.fleetworks.memo.chat.ToolRegistryTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

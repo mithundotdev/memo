@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "dev.fleetworks.memo.app-debug-56:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "dev.fleetworks.memo.app-main-58:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "dev.fleetworks.memo.app-debug-56:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "dev.fleetworks.memo.app-main-58:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "dev.fleetworks.memo.app-debug-56:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "dev.fleetworks.memo.app-main-58:/mipmap-anydpi-v26/ic_launcher.xml"
+    }
+]

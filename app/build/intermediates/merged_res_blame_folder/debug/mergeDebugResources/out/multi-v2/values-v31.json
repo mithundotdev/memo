@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "dev.fleetworks.memo.app-mergeDebugResources-54:/values-v31/values-v31.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\srisr\\.gradle\\caches\\8.9\\transforms\\c0720e649584b52679cc06b96b99d3c8\\transformed\\core-splashscreen-1.0.1\\res\\values-v31\\values-v31.xml",
+                    "from": {
+                        "startLines": "2,9",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,473",
+                        "endLines": "8,13",
+                        "endColumns": "12,12",
+                        "endOffsets": "468,697"
+                    }
+                }
+            ]
+        }
+    ]
+}
