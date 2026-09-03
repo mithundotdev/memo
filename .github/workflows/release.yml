@@ -25,18 +25,14 @@ jobs:
       - name: Build release APK
         run: chmod +x gradlew && ./gradlew :app:assembleRelease
 
-      - name: Find APK
-        id: apk
-        run: |
-          APK=$(find app/build/outputs/apk/release -name '*.apk' | head -n 1)
-          echo "apk-path=$APK" >> $GITHUB_OUTPUT
-
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          APK=$(find app/build/outputs/apk/release -name '*.apk' | head -n 1)
+          cp "$APK" "memo-${GITHUB_REF#refs/tags/}.apk"
           gh release create "${GITHUB_REF#refs/tags/}" \
             --title "${{ github.ref_name }}" \
             --notes "Build from ${{ github.sha }}." \
             --generate-notes \
-            "${{ steps.apk.outputs.apk-path }}"#memo-${GITHUB_REF#refs/tags/}.apk
+            "memo-${GITHUB_REF#refs/tags/}.apk"
