@@ -1,5 +1,10 @@
 package dev.fleetworks.memo
 
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.scaleOut
+import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.List
@@ -63,7 +68,17 @@ fun MemoNav(container: AppContainer) {
             }
             composable(
                 "detail/{id}",
-                arguments = listOf(navArgument("id") { type = NavType.StringType })
+                arguments = listOf(navArgument("id") { type = NavType.StringType }),
+                enterTransition = {
+                    fadeIn() + scaleIn(initialScale = 0.96f) +
+                        slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Start)
+                },
+                exitTransition = { fadeOut() + scaleOut(targetScale = 0.96f) },
+                popEnterTransition = { fadeIn() + scaleIn(initialScale = 0.96f) },
+                popExitTransition = {
+                    fadeOut() + scaleOut(targetScale = 0.96f) +
+                        slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.End)
+                }
             ) {
                 val id = it.arguments?.getString("id").orEmpty()
                 NoteDetailScreen(repo = container.repo, noteId = id, onBack = { nav.popBackStack() })
