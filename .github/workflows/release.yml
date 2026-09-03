@@ -38,5 +38,5 @@ jobs:
           gh release create "${GITHUB_REF#refs/tags/}" \
             --title "${{ github.ref_name }}" \
             --notes "Build from ${{ github.sha }}." \
-            --generate \
+            --generate-notes \
             "${{ steps.apk.outputs.apk-path }}"#memo-${GITHUB_REF#refs/tags/}.apk
