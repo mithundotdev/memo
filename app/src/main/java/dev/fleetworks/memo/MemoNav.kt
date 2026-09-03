@@ -2,8 +2,8 @@ package dev.fleetworks.memo
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Chat
-import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.automirrored.filled.List
+import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
@@ -35,13 +35,13 @@ fun MemoNav(container: AppContainer) {
                 NavigationBarItem(
                     selected = route.startsWith("notes") || route.startsWith("detail"),
                     onClick = { nav.navigate("notes") { launchSingleTop = true } },
-                    icon = { Icon(Icons.Filled.List, contentDescription = null) },
+                    icon = { Icon(Icons.AutoMirrored.Filled.List, contentDescription = null) },
                     label = { Text("Notes") }
                 )
                 NavigationBarItem(
                     selected = route == "chat",
                     onClick = { nav.navigate("chat") { launchSingleTop = true } },
-                    icon = { Icon(Icons.Filled.Chat, contentDescription = null) },
+                    icon = { Icon(Icons.AutoMirrored.Filled.Send, contentDescription = null) },
                     label = { Text("Chat") }
                 )
                 NavigationBarItem(

@@ -3,6 +3,7 @@ package dev.fleetworks.memo.ui.notes
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -28,6 +29,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.compose.viewModel
 import dev.fleetworks.memo.core.NoteRepository
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun NotesListScreen(repo: NoteRepository, onOpen: (String) -> Unit, onNew: () -> Unit) {
     val vm: NotesViewModel = viewModel(factory = object : ViewModelProvider.Factory {

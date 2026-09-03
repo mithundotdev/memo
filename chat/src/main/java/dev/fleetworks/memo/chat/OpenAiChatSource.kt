@@ -9,7 +9,9 @@ import com.aallam.openai.api.model.ModelId
 import com.aallam.openai.client.OpenAI
 import com.aallam.openai.client.OpenAIConfig
 import com.aallam.openai.client.OpenAIHost
+import com.aallam.openai.api.core.Parameters
 import dev.fleetworks.memo.core.profile.ProviderProfile
+import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
 import kotlinx.serialization.json.putJsonArray
@@ -30,7 +32,7 @@ class OpenAiChatSource(profile: ProviderProfile) {
             this.messages = messages
             tools {
                 for (def in toolDefs()) {
-                    function(name = def.name, description = def.description, parameters = def.parameters)
+                    function(name = def.name, description = def.description, parameters = Parameters(def.parameters))
                 }
             }
             toolChoice = ToolChoice.Auto
@@ -53,7 +55,7 @@ class OpenAiChatSource(profile: ProviderProfile) {
                 put("type", "object")
                 putJsonObject("properties") {
                     putJsonObject("query") { put("type", "string") }
-                    putJsonObject("limit") { put("type", "string") }
+                    putJsonObject("limit") { put("type", "integer") }
                 }
             }
         ),
@@ -64,7 +66,7 @@ class OpenAiChatSource(profile: ProviderProfile) {
                 putJsonObject("properties") {
                     putJsonObject("id") { put("type", "string") }
                 }
-                putJsonArray("required") { add("id") }
+                putJsonArray("required") { add(JsonPrimitive("id")) }
             }
         ),
         ToolDef(
@@ -86,7 +88,7 @@ class OpenAiChatSource(profile: ProviderProfile) {
                     putJsonObject("title") { put("type", "string") }
                     putJsonObject("body") { put("type", "string") }
                 }
-                putJsonArray("required") { add("id") }
+                putJsonArray("required") { add(JsonPrimitive("id")) }
             }
         ),
         ToolDef(
@@ -96,7 +98,7 @@ class OpenAiChatSource(profile: ProviderProfile) {
                 putJsonObject("properties") {
                     putJsonObject("id") { put("type", "string") }
                 }
-                putJsonArray("required") { add("id") }
+                putJsonArray("required") { add(JsonPrimitive("id")) }
             }
         )
     )
