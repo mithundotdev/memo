@@ -35,6 +35,7 @@ navigation-compose = { group = "androidx.navigation", name = "navigation-compose
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-splash = { group = "androidx.core", name = "core-splashscreen", version.ref = "splash" }
 openai-client = { group = "com.aallam.openai", name = "openai-client", version.ref = "openaiClient" }
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
 ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
 coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }

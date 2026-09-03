@@ -41,7 +41,18 @@ class OpenAiChatSource(profile: ProviderProfile) {
     }
 
     suspend fun test(): Boolean {
-        client.models()
+        val request = chatCompletionRequest {
+            this.model = this@OpenAiChatSource.model
+            this.messages = listOf(
+                RemoteMessage(
+                    role = RemoteRole.User,
+                    content = "ping"
+                )
+            )
+            this.maxTokens = 1
+            this.temperature = 0.0
+        }
+        client.chatCompletion(request)
         return true
     }
 
