@@ -19,6 +19,6 @@ object PromptBuilder {
 
     private fun summarizeSearch(result: String): String {
         val count = Regex("""found (\d+) notes""").find(result)?.groupValues?.get(1) ?: "0"
-        return "searched $count notes"
+        return "looked through $count notes"
     }
 }
