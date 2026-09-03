@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.activity.compose)
     implementation(libs.navigation.compose)
     implementation(libs.core.ktx)
+    implementation(libs.androidx.splash)
     implementation(libs.coroutines.core)
     implementation(libs.coroutines.android)
 }
