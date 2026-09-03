@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dev.fleetworks.memo.chat.OpenAiChatSource
 import dev.fleetworks.memo.core.profile.ProfileStore
+import dev.fleetworks.memo.core.profile.ProviderPreset
 import dev.fleetworks.memo.core.profile.ProviderProfile
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -24,6 +25,11 @@ class SettingsViewModel(private val profiles: ProfileStore) : ViewModel() {
             apiKey.value = current.apiKey
             model.value = current.model
         }
+    }
+
+    fun applyPreset(preset: ProviderPreset) {
+        baseUrl.value = preset.baseUrl
+        if (model.value.isBlank()) model.value = preset.modelHint
     }
 
     fun save() {
